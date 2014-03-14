@@ -19,6 +19,7 @@
 		2828C1AC18CE95D300D30DB5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2828C19418CE95D300D30DB5 /* UIKit.framework */; };
 		2828C1B418CE95D300D30DB5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2828C1B218CE95D300D30DB5 /* InfoPlist.strings */; };
 		2828C1B618CE95D300D30DB5 /* ToDoListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2828C1B518CE95D300D30DB5 /* ToDoListTests.m */; };
+		2828C1C018CE9A2700D30DB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2828C1BF18CE9A2700D30DB5 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		2828C1B118CE95D300D30DB5 /* ToDoListTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ToDoListTests-Info.plist"; sourceTree = "<group>"; };
 		2828C1B318CE95D300D30DB5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2828C1B518CE95D300D30DB5 /* ToDoListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoListTests.m; sourceTree = "<group>"; };
+		2828C1BF18CE9A2700D30DB5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			children = (
 				2828C19F18CE95D300D30DB5 /* TDLAppDelegate.h */,
 				2828C1A018CE95D300D30DB5 /* TDLAppDelegate.m */,
+				2828C1BF18CE9A2700D30DB5 /* Main.storyboard */,
 				2828C1A218CE95D300D30DB5 /* Images.xcassets */,
 				2828C19718CE95D300D30DB5 /* Supporting Files */,
 			);
@@ -220,6 +223,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2828C1C018CE9A2700D30DB5 /* Main.storyboard in Resources */,
 				2828C19B18CE95D300D30DB5 /* InfoPlist.strings in Resources */,
 				2828C1A318CE95D300D30DB5 /* Images.xcassets in Resources */,
 			);
