@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2827ACB418D74E19001A507C /* TDLAddToDoItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2827ACB218D74E19001A507C /* TDLAddToDoItemViewController.m */; };
+		2827ACB818D75506001A507C /* TDLToDoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2827ACB718D75506001A507C /* TDLToDoListViewController.m */; };
 		2828C19118CE95D300D30DB5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2828C19018CE95D300D30DB5 /* Foundation.framework */; };
 		2828C19318CE95D300D30DB5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2828C19218CE95D300D30DB5 /* CoreGraphics.framework */; };
 		2828C19518CE95D300D30DB5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2828C19418CE95D300D30DB5 /* UIKit.framework */; };
@@ -33,6 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2827ACB118D74E19001A507C /* TDLAddToDoItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDLAddToDoItemViewController.h; sourceTree = "<group>"; };
+		2827ACB218D74E19001A507C /* TDLAddToDoItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDLAddToDoItemViewController.m; sourceTree = "<group>"; };
+		2827ACB618D75506001A507C /* TDLToDoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDLToDoListViewController.h; sourceTree = "<group>"; };
+		2827ACB718D75506001A507C /* TDLToDoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDLToDoListViewController.m; sourceTree = "<group>"; };
 		2828C18D18CE95D300D30DB5 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2828C19018CE95D300D30DB5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2828C19218CE95D300D30DB5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -112,6 +118,10 @@
 				2828C19F18CE95D300D30DB5 /* TDLAppDelegate.h */,
 				2828C1A018CE95D300D30DB5 /* TDLAppDelegate.m */,
 				2828C1BF18CE9A2700D30DB5 /* Main.storyboard */,
+				2827ACB618D75506001A507C /* TDLToDoListViewController.h */,
+				2827ACB718D75506001A507C /* TDLToDoListViewController.m */,
+				2827ACB118D74E19001A507C /* TDLAddToDoItemViewController.h */,
+				2827ACB218D74E19001A507C /* TDLAddToDoItemViewController.m */,
 				2828C1A218CE95D300D30DB5 /* Images.xcassets */,
 				2828C19718CE95D300D30DB5 /* Supporting Files */,
 			);
@@ -192,7 +202,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = TDL;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Ramiro Franco";
 				TargetAttributes = {
 					2828C1A718CE95D300D30DB5 = {
@@ -244,7 +254,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2827ACB818D75506001A507C /* TDLToDoListViewController.m in Sources */,
 				2828C19D18CE95D300D30DB5 /* main.m in Sources */,
+				2827ACB418D74E19001A507C /* TDLAddToDoItemViewController.m in Sources */,
 				2828C1A118CE95D300D30DB5 /* TDLAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,7 +303,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -330,7 +341,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -388,7 +398,6 @@
 		2828C1BD18CE95D300D30DB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ToDoList.app/ToDoList";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -411,7 +420,6 @@
 		2828C1BE18CE95D300D30DB5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ToDoList.app/ToDoList";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -446,6 +454,7 @@
 				2828C1BB18CE95D300D30DB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2828C1BC18CE95D300D30DB5 /* Build configuration list for PBXNativeTarget "ToDoListTests" */ = {
 			isa = XCConfigurationList;
@@ -454,6 +463,7 @@
 				2828C1BE18CE95D300D30DB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
