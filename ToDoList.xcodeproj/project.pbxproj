@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		280EBA5518D9101700399ADF /* TDLToDoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 280EBA5418D9101700399ADF /* TDLToDoItem.m */; };
 		2827ACB418D74E19001A507C /* TDLAddToDoItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2827ACB218D74E19001A507C /* TDLAddToDoItemViewController.m */; };
 		2827ACB818D75506001A507C /* TDLToDoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2827ACB718D75506001A507C /* TDLToDoListViewController.m */; };
 		2828C19118CE95D300D30DB5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2828C19018CE95D300D30DB5 /* Foundation.framework */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		280EBA5318D9101700399ADF /* TDLToDoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDLToDoItem.h; sourceTree = "<group>"; };
+		280EBA5418D9101700399ADF /* TDLToDoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDLToDoItem.m; sourceTree = "<group>"; };
 		2827ACB118D74E19001A507C /* TDLAddToDoItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDLAddToDoItemViewController.h; sourceTree = "<group>"; };
 		2827ACB218D74E19001A507C /* TDLAddToDoItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDLAddToDoItemViewController.m; sourceTree = "<group>"; };
 		2827ACB618D75506001A507C /* TDLToDoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDLToDoListViewController.h; sourceTree = "<group>"; };
@@ -119,6 +122,8 @@
 				2828C1A018CE95D300D30DB5 /* TDLAppDelegate.m */,
 				2828C1BF18CE9A2700D30DB5 /* Main.storyboard */,
 				2827ACB618D75506001A507C /* TDLToDoListViewController.h */,
+				280EBA5318D9101700399ADF /* TDLToDoItem.h */,
+				280EBA5418D9101700399ADF /* TDLToDoItem.m */,
 				2827ACB718D75506001A507C /* TDLToDoListViewController.m */,
 				2827ACB118D74E19001A507C /* TDLAddToDoItemViewController.h */,
 				2827ACB218D74E19001A507C /* TDLAddToDoItemViewController.m */,
@@ -257,6 +262,7 @@
 				2827ACB818D75506001A507C /* TDLToDoListViewController.m in Sources */,
 				2828C19D18CE95D300D30DB5 /* main.m in Sources */,
 				2827ACB418D74E19001A507C /* TDLAddToDoItemViewController.m in Sources */,
+				280EBA5518D9101700399ADF /* TDLToDoItem.m in Sources */,
 				2828C1A118CE95D300D30DB5 /* TDLAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

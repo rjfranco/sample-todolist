@@ -7,20 +7,28 @@
 //
 
 #import "TDLToDoListViewController.h"
+#import "TDLToDoItem.h"
+#import "TDLAddToDoItemViewController.h"
 
 @interface TDLToDoListViewController ()
+
+@property NSMutableArray *toDoItems;
 
 @end
 
 @implementation TDLToDoListViewController
 
-- (IBAction)unwindToList:(UIStoryboardSegue *)segue
-{
+- (IBAction)unwindToList:(UIStoryboardSegue *)segue {
+    TDLAddToDoItemViewController *source = [segue sourceViewController];
+    TDLToDoItem *item = source.toDoItem;
     
+    if (item != nil) {
+        [self.toDoItems addObject:item];
+        [self.tableView reloadData];
+    }
 }
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
+- (id)initWithStyle:(UITableViewStyle)style {
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
@@ -28,9 +36,25 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)loadInitialData {
+    TDLToDoItem *item1 = [[TDLToDoItem alloc] init];
+    item1.itemName = @"Go home.";
+    [self.toDoItems addObject:item1];
+    
+    TDLToDoItem *item2 = [[TDLToDoItem alloc] init];
+    item2.itemName = @"Eat something.";
+    [self.toDoItems addObject:item2];
+    
+    TDLToDoItem *item3 = [[TDLToDoItem alloc] init];
+    item3.itemName = @"Get my wife some meat";
+    [self.toDoItems addObject:item3];
+}
+
+- (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.toDoItems = [[NSMutableArray alloc] init];
+    [self loadInitialData];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -39,41 +63,43 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
 
-/*
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    #warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    // Return the number of sections. (thanks apple.)
+    return 1;
 }
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    #warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    // Return the number of rows in the section, or you know, array length. 
+    return [self.toDoItems count];
 }
-*/
 
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ListPrototypeCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    // logic to set label for current item.
+    TDLToDoItem *toDoItem = [self.toDoItems objectAtIndex:indexPath.row];
+    cell.textLabel.text = toDoItem.itemName;
+    
+    // Disable checkmark icon.
+    if (toDoItem.completed) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
@@ -123,5 +149,14 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    TDLToDoItem *tappedItem = [self.toDoItems objectAtIndex:indexPath.row];
+    tappedItem.completed = !tappedItem.completed;
+    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+}
 
 @end
